@@ -1,0 +1,19 @@
+
+First, explain the structure of my project.
+I wrote 2 ADTs (part of the content comes from Neill's github, which is explained in the comments at the beginning of the code): stringlist.c / stringlist.h / stack.c / stack.h.
+My parser and interpreter are also arranged in an approximate way, that is, does not include the main function.
+In addition, general.c/general.h includes general structures, functions, header files, etc.
+It is finally run through mainparser.c/maininterp.c.
+
+According to my understanding, my testing strategy can be divided into 3 parts:
+unit testing, black box testing and white box testing.
+
+test_function(), test_stringlist() and test_general() is used for unit test.
+It includes the test for all the functions written by me.
+
+For black box testing, test_parser() and test_interp() were used.
+All the example used in test can be parsed and interpreted except EX8.
+
+For write box testing, I wrote test_interp.c and test_interp.h.
+They are only used for test, which is as the same as interp but with a lot of printf function.
+It can show the 'route' and the operation about how the turtle is printed step by step.

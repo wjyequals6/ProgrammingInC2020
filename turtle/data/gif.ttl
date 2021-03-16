@@ -1,0 +1,10 @@
+{
+    OUTPUT GIF
+    DO A FROM 1 TO 60 {
+        SET C := A 2.9 * ;
+        CYAN FD C
+        RT 62
+        WHITE FD 10
+        LT 100
+   }
+}

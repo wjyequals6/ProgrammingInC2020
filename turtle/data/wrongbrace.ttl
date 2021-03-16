@@ -1,0 +1,6 @@
+{
+    DO C FROM A TO W 
+        FD 100
+        RT 100
+    }
+}

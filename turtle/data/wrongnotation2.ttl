@@ -1,0 +1,7 @@
+{
+    DO A FROM 1 TO 200 {
+        SET B := * ;
+        FD B
+        RT 30
+    }
+}

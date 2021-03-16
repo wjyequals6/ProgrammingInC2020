@@ -1,0 +1,28 @@
+The Update Grammar:
+<MAIN> ::= "{" <OUTPUT>
+<INSTRCTLST> ::= <INSTRUCTION><INSTRCTLST> | "}"
+<INSTRUCTION> ::= <FD> | <LT> | <RT> | <DO> | <SET>
+<FD> ::= <COLOR> <FD> | "FD" <VARNUM> /* Now the user can choose whether they need special color. */
+<LT> ::= "LT" <VARNUM>
+<RT> ::= "RT" <VARNUM>
+<DO> ::= "DO" <VAR> "FROM" <VARNUM> "TO"
+<VARNUM> "{" <INSTRCTLST>
+<VAR> ::= [A−Z]
+<VARNUM> ::= number | <VAR>
+<SET> ::= "SET" <VAR> ":=" <POLISH>
+<POLISH> ::= <OP> <POLISH> | <VARNUM> <POLISH> | ";" <OP> ::= "+" | "−" | "*" | "/"
+<COLOR> ::= "WHITE"|"RED"|"ORANGE"|"KHAKI"|"GREEN"|"CYAN"
+<OUTPUT> ::= "OUTPUT" <FORMAT> <INSTRCTLST>| <INSTRCTLST>
+<FORMAT> ::= "GIT"|"IMAGE"
+
+The Grammar Changes in:
+1. The program will start from a random color until any specific color is arranged.
+2. At the beginning of the turtle code, users can set the output format.
+The default format is image.
+
+These can be test by:
+make color1
+make color2
+make gif
+make image
+make extensionall

@@ -1,0 +1,4 @@
+Extra function in extension.c:
+1.Graphical display : Add the color of books using neillsimplescreen. Can be compiled by 'gcc extension.c neillsimplescreen.c ...'
+2.Add a potential file validating on whether all the books are put from the left side and there is no space between them.
+
